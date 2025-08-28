@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { XMLParser } from "fast-xml-parser";
+const apiKey = import.meta.env.VITE_MY_APIKEY;
 import Result from "./Result";
 
 function SearchBox() {
@@ -12,7 +13,7 @@ function SearchBox() {
     if (Domain.current.value.length > 0) {
       try {
         const res = await fetch(
-          `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=at_EQwcwe9rzuRAFubX2qetSjxidJAOm&domainName=${Domain.current.value}`
+          `https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey=${apiKey}&domainName=${Domain.current.value}`
         );
         const xmlText = await res.text();
         const parser = new XMLParser();
