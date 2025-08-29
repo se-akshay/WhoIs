@@ -102,4 +102,4 @@ MIT
 
 ## Contact
 
-For support or inquiries, contact: [your-email@example.com]
+For support or inquiries, contact: akshay8081singh@gmail.com
